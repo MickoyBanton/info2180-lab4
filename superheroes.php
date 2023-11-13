@@ -65,8 +65,12 @@ $superheroes = [
 
 ?>
 
+<?php if ($_SERVER['REQUEST_METHOD'] == 'GET') { ?>
+
 <ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
+    <?php foreach ($superheroes as $superhero): ?>
+        <li><?= $superhero['alias']; ?></li>
+    <?php endforeach; ?>
 </ul>
+
+<?php } ?>
